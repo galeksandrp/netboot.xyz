@@ -47,8 +47,9 @@ set util_file bootimage-${breakin_version}.iso
 goto boot_memdisk
 
 :clonezilla
-set clonezilla_version 2.6.0-37
-set util_path sourceforge.net/projects/clonezilla/files/clonezilla_live_stable/${clonezilla_version}/clonezilla-live-${clonezilla_version}-amd64.iso/download
+set clonezilla_version 2.6.2-15
+set clonezilla_osdn_release_number 71318
+set util_path osdn.net/frs/redir.php?f=clonezilla%2F${clonezilla_osdn_release_number}%2Fclonezilla-live-${clonezilla_version}-amd64.iso
 set util_file clonezilla-live-${clonezilla_version}-amd64.iso
 goto boot_memdisk
 
