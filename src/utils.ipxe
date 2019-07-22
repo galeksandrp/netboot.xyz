@@ -61,10 +61,12 @@ set util_file dban-${dban_version}_i586.iso
 goto boot_memdisk
 
 :gparted
-set gparted_version 0.33.0-2
-set util_path sourceforge.net/projects/gparted/files/gparted-live-stable/${gparted_version}/gparted-live-${gparted_version}-amd64.iso/download
-set util_file gparted-live-${gparted_version}-amd64.iso
-goto boot_memdisk
+set gparted_version 1.0.0-3
+imgfree
+kernel http://192.168.1.37/dSSD/gparted-live-${gparted_version}-amd64/live/vmlinuz initrd=initrd.img boot=live config components union=overlay username=user noswap noeject ip= vga=788 fetch=http://192.168.1.37/dSSD/gparted-live-${gparted_version}-amd64/live/filesystem.squashfs
+initrd http://192.168.1.37/dSSD/gparted-live-${gparted_version}-amd64/live/initrd.img
+boot
+goto utils_exit
 
 :memtest-501
 set util_path boot.netboot.xyz/utils/memtest86-5.01.0
