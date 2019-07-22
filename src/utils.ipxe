@@ -48,8 +48,8 @@ goto boot_memdisk
 
 :clonezilla
 set clonezilla_version 2.6.2-15
-kernel 192.168.1.37/dSSD/clonezilla-live-${clonezilla_version}-amd64/live/vmlinuz initrd=initrd.img boot=live username=user union=overlay config components quiet noswap edd=on nomodeset nodmraid locales= keyboard-layouts= ocs_live_run="ocs-live-general" ocs_live_extra_param="" ocs_live_batch=no net.ifnames=0 nosplash noprompt fetch=http://192.168.1.37/dSSD/clonezilla-live-${clonezilla_version}-amd64/live/filesystem.squashfs
-initrd 192.168.1.37/dSSD/clonezilla-live-${clonezilla_version}-amd64/live/initrd.img
+kernel http://192.168.1.37/dSSD/clonezilla-live-${clonezilla_version}-amd64/live/vmlinuz initrd=initrd.img boot=live username=user union=overlay config components quiet noswap edd=on nomodeset nodmraid locales= keyboard-layouts= ocs_live_run="ocs-live-general" ocs_live_extra_param="" ocs_live_batch=no net.ifnames=0 nosplash noprompt fetch=http://192.168.1.37/dSSD/clonezilla-live-${clonezilla_version}-amd64/live/filesystem.squashfs
+initrd http://192.168.1.37/dSSD/clonezilla-live-${clonezilla_version}-amd64/live/initrd.img
 boot
 
 :dban
